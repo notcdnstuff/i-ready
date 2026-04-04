@@ -1,5 +1,5 @@
 // Config
-const CDN = "https://iamchristians.github.io/assets/";
+const CDN = "https://mathresources.axsetubal.pt";
 const MAX_RECENT = 12;
 const MAX_RANDOM_GAMES = 12;
 
