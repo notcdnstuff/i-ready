@@ -2,7 +2,7 @@
 const REVIEWS = [
 	{ user: "Brady", stars: 4, text: "-1 star because 12 Mini Battles is rigged. (AKA I'm horrible at them)" },
 	{ user: "Finn", stars: 5, text: "Before I found this website, I had no girlfriend and was a loser. This hasn't changed, but the website is cool." },
-	{ user: "Hudson", stars: 4, text: "This website is so great!" },
+	{ user: "Hudson", stars: 4, text: "This website makes biology fun!" },
 	{ user: "Karter Fife", stars: 5, text: "The games are so fun, if only I had friends to play with."}
 ];
 
