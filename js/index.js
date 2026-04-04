@@ -1,16 +1,17 @@
 // Config
 const REVIEWS = [
-	{ user: "typicalsneeze", stars: 4, text: "Project-HUB: A serene digital escape - the calm luh website you've been seeking." },
-	{ user: "Leggoome", stars: 5, text: "Before I found this website, I had no girlfriend and was a loser. This hasn't changed, but the website is cool." },
-	{ user: "Zachary", stars: 4, text: "This game helped me while I was sick and I think it's amazing." },
+	{ user: "Brady", stars: 4, text: "-1 star because 12 Mini Battles is rigged. (AKA I'm horrible at them)" },
+	{ user: "Finn", stars: 5, text: "Before I found this website, I had no girlfriend and was a loser. This hasn't changed, but the website is cool." },
+	{ user: "Hudson", stars: 4, text: "This website is so great!" },
+	{ user: "Karter Fife", stars: 5, text: "The games are so fun, if only I had friends to play with."}
 ];
 
-const FEATURED_REVIEW = [
-	{
-		user: "Want to be featured? <span>&starf;</span>",
-		text: `Fill out <a href="https://forms.gle/2jF6mzjqozU8DNXv8" target="_blank">this form</a> to get a chance for your review to appear on the front page!`,
-	},
-];
+//const FEATURED_REVIEW = [
+//	{
+//		user: "Want to be featured? <span>&starf;</span>",
+//		text: `Fill out <a href="https://forms.gle/2jF6mzjqozU8DNXv8" target="_blank">this form</a> to get a chance for your review to appear on the front page!`,
+//	},
+// ];
 
 // Global
 let games = [];

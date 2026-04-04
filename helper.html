@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, nofollow" />
+
+    <title>Project-HUB | AI Helper</title>
+    <meta name="description" content="A large, curated game library of Flash games, web ports, emulators, and more. No BS or installs needed." />
+
+    <meta property="og:title" content="Project-HUB | About" />
+    <meta property="og:site_name" content="Project-HUB" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="img/hero.webp" />
+    <meta property="og:image:alt" content="Laptop with Project-HUB website." />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" id="dynamic-favicon" type="image/png" href="img/favicons/favicon-64x64.png" sizes="64x64">
+    <link rel="icon" type="image/svg+xml" href="img/favicons/favicon.svg">
+    <link rel="icon" type="image/png" sizes="64x64" href="img/favicons/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/about.css" />
+
+    <style>
+        /* Make body a column flex container */
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Navbar and footer keep their default heights (adjust if needed) */
+        #navbar {
+            height: 60px;
+        }
+
+        #footer {
+            height: 50px;
+        }
+
+        /* Main content grows to fill remaining space */
+        main {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        main iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar"></nav>
+
+    <!-- Main content -->
+    <main>
+        <iframe src="aicdn.html"></iframe>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="js/svg.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/global.js"></script>
+</body>
+
+</html>

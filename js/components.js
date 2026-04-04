@@ -21,7 +21,7 @@ function buildNavbar() {
             ${addLink("index.html", "Home")}
             ${addLink("games.html", "Games")}
             ${addLink("settings.html", "Settings")}
-            ${addLink("about.html", "About")}
+            ${addLink("helper.html", "AI")}
         </div>
 
         <button class="theme-toggle" id="theme-toggle">
@@ -37,7 +37,7 @@ function buildFooter() {
 	const year = new Date().getFullYear();
 
 	footer.innerHTML = `
-        ${year} &copy; Christian Santangelo
+       Use of this site during school hours is at your own discretion; we are not responsible for any consequences resulting from its use. 
     `;
 }
 
