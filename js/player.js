@@ -156,26 +156,52 @@ function loadDetails() {
     gameDetails.innerHTML = "";
     descriptionContainer.innerHTML = "<h2>Description</h2>";
 
-    // ❌ Remove the red button completely
-    if (infoButton) infoButton.remove();
+    // Description (inside the box on the right)
+const gameDetails = document.getElementById("game-details");
+const infoButton = document.getElementById("info-btn");
 
-    // ✅ Move description to the LEFT box
-    const descriptionText = currentGame.description || "No description available";
+// Reset content
+gameDetails.innerHTML = "";
+
+// Check if description or details exist
+const gameDetails = document.getElementById("game-details");
+const infoButton = document.getElementById("info-btn");
+
+// Reset content
+gameDetails.innerHTML = "";
+
+// Check if description or details exist
+const hasDescription = "description" in currentGame && currentGame.description.trim() !== "";
+const hasDetails = "details" in currentGame && Object.keys(currentGame.details).length > 0;
+
+if (hasDescription) {
     const descriptionDiv = document.createElement("div");
-    descriptionDiv.innerHTML = `<p>${descriptionText}</p>`;
-    descriptionContainer.append(descriptionDiv);
+    descriptionDiv.innerHTML = `
+        <h4>Description</h4>
+        <p>${currentGame.description}</p>
+    `;
+    gameDetails.append(descriptionDiv);
+}
 
-    // ✅ Keep other details on the RIGHT
-    if ("details" in currentGame) {
-        Object.keys(currentGame.details).forEach((key) => {
-            const detail = document.createElement("div");
-            detail.innerHTML = `
-                <h4>${key}</h4>
-                <p>${currentGame.details[key]}</p>
-            `;
-            gameDetails.append(detail);
-        });
-    }
+if (hasDetails) {
+    Object.keys(currentGame.details).forEach((key) => {
+        const detail = document.createElement("div");
+        detail.innerHTML = `
+            <h4>${key}</h4>
+            <p>${currentGame.details[key]}</p>
+        `;
+        gameDetails.append(detail);
+    });
+}
+
+// If no description AND no details, show "No info available"
+if (!hasDescription && !hasDetails) {
+    const noInfoDiv = document.createElement("div");
+    noInfoDiv.innerHTML = `<p>No info available</p>`;
+    gameDetails.append(noInfoDiv);
+    if (infoButton) infoButton.style.display = "none";
+} else if (infoButton) {
+    infoButton.style.display = "block"; // show button if info exists
 }
 
 // Initialize
