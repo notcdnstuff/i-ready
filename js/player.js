@@ -101,21 +101,21 @@ function buildMute() {
 	const muteBtn = document.getElementById("mute");
 	const muteMask = document.getElementById("mute-mask");
 	const player = document.getElementById("player");
-    const tooltip = document.getElementById("mute-tooltip");
+	const tooltip = document.getElementById("mute-tooltip");
 
-    muteMask.style.transformOrigin = "center";
+	muteMask.style.transformOrigin = "center";
 
 	muteBtn.addEventListener("click", () => {
 		player.muted = !player.muted;
 
 		if (player.muted) {
-            muteMask.style.transform = "rotate(45deg)";
-            muteMask.style.stroke = "red";
-            tooltip.textContent = "Unmute Player";
+			muteMask.style.transform = "rotate(45deg)";
+			muteMask.style.stroke = "red";
+			tooltip.textContent = "Unmute Player";
 		} else {
-            muteMask.style.transform = "rotate(0deg)";
-            muteMask.style.stroke = "var(--text)";
-            tooltip.textContent = "Mute Player";
+			muteMask.style.transform = "rotate(0deg)";
+			muteMask.style.stroke = "var(--text)";
+			tooltip.textContent = "Mute Player";
 		}
 	});
 }
@@ -150,31 +150,28 @@ function loadGame() {
 function loadDetails() {
 	const gameDescription = document.getElementById("game-description");
 	const gameDetails = document.getElementById("game-details");
-    const gameKeys = Object.keys(currentGame);
-    const infoButton = document.getElementById("info-btn");
+	const infoButton = document.getElementById("info-btn");
 
-    if (!gameKeys.includes("description" && !gameKeys.includes("details"))) {
-        infoButton.style.display = "none";
-        return;
-    }
+	// Reset content
+	gameDescription.innerHTML = "<h2>Description</h2>";
+	gameDetails.innerHTML = "";
+	gameDescription.style.display = "";
+	gameDetails.style.display = "";
 
-	if (gameKeys.includes("description")) {
-		const description = document.createElement("p");
-		description.textContent = currentGame["description"];
+	// Always show description, use placeholder if missing
+	const descriptionText = currentGame.description || "No description available";
+	const description = document.createElement("p");
+	description.textContent = descriptionText;
+	gameDescription.append(description);
 
-		gameDescription.append(description);
-	} else {
-		gameDescription.style.display = "none";
-	}
-
-	if (gameKeys.includes("details")) {
-		Object.keys(currentGame["details"]).forEach((key) => {
+	// Details
+	if ("details" in currentGame) {
+		Object.keys(currentGame.details).forEach((key) => {
 			const detail = document.createElement("div");
 			detail.innerHTML = `
-                <h4>${key}</h4>
-                <p>${currentGame["details"][key]}</p>
-            `;
-
+				<h4>${key}</h4>
+				<p>${currentGame.details[key]}</p>
+			`;
 			gameDetails.append(detail);
 		});
 	} else {
