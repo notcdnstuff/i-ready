@@ -159,6 +159,7 @@ function loadDetails() {
     // Description (inside the box on the right)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const gameDetails = document.getElementById("game-details");
 const infoButton = document.getElementById("info-btn");
 
@@ -178,10 +179,13 @@ if (hasDescription) {
 >>>>>>> parent of 2d1bc05 (1)
 =======
 >>>>>>> parent of 2d1bc05 (1)
+=======
+>>>>>>> parent of 2d1bc05 (1)
     const descriptionText = currentGame.description || "No description available";
     const descriptionDiv = document.createElement("div");
     descriptionDiv.innerHTML = `
         <h4>Description</h4>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <p>${currentGame.description}</p>
@@ -253,6 +257,12 @@ if (!hasDescription && !hasDetails) {
     gameDetails.append(descriptionDiv);
 
 >>>>>>> parent of 2d1bc05 (1)
+=======
+        <p>${descriptionText}</p>
+    `;
+    gameDetails.append(descriptionDiv);
+
+>>>>>>> parent of 2d1bc05 (1)
     // Other details
     if ("details" in currentGame) {
         Object.keys(currentGame.details).forEach((key) => {
@@ -270,6 +280,9 @@ if (!hasDescription && !hasDetails) {
         if (infoButton) infoButton.style.display = "none";
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 2d1bc05 (1)
+=======
 >>>>>>> parent of 2d1bc05 (1)
 =======
 >>>>>>> parent of 2d1bc05 (1)
