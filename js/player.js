@@ -165,9 +165,6 @@ function loadDetails() {
     descriptionDiv.innerHTML = `<p>${descriptionText}</p>`;
     descriptionContainer.append(descriptionDiv);
 
-
-
-
     // ✅ Keep other details on the RIGHT
     if ("details" in currentGame) {
         Object.keys(currentGame.details).forEach((key) => {
@@ -179,11 +176,6 @@ function loadDetails() {
             gameDetails.append(detail);
         });
     }
-
-
-
-
-
 }
 
 // Initialize
@@ -199,3 +191,4 @@ function loadDetails() {
 	buildFullscreen();
 
 	addRandomGames(games);
+})();
