@@ -3,12 +3,12 @@
 
 // Config
 const PRESETS = {
+	iready: { title: "I-Ready", icon: "https://login.i-ready.com/" },
 	google: { title: "Google", icon: "https://google.com" },
 	googledrive: { title: "Google Drive", icon: "https://drive.google.com" },
 	desmos: { title: "Desmos", icon: "https://desmos.com/calculator" },
-	canvas: { title: "Canvas", icon: "https://canvas.instructure.com" },
-	turnitin: { title: "TurnItIn", icon: "https://turnitin.com" },
-	collegeboard: { title: "College Board", icon: "https://collegeboard.org" },
+	canva: { title: "Canva", icon: "https://www.canva.com" },
+	formative: { title: "Formative", icon: "https://www.formative.com" },
 };
 
 // Helpers
