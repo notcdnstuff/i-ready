@@ -8,6 +8,7 @@ const PRESETS = {
 	desmos: { title: "Desmos", icon: "https://desmos.com/calculator" },
 	canva: { title: "Canva", icon: "https://www.canva.com" },
 	formative: { title: "Formative", icon: "https://www.formative.com" },
+	mail: { title: "Gmail", icon: "https://mail.google.com/" },
 };
 
 // Helpers
