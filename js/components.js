@@ -22,7 +22,7 @@ function buildNavbar() {
             ${addLink("/games/", "Games")}
 			${addLink("/helper/", "AI")}
             ${addLink("/settings/", "Settings")}
-            ${addLink("/requests/", "Content Request")}
+            ${addLink("/request/", "Content Request")}
         </div>
 
         <button class="theme-toggle" id="theme-toggle">
