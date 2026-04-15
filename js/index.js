@@ -5,7 +5,9 @@ const REVIEWS = [
 	{ user: "Hudson", stars: 5, text: "This website makes biology fun!" },
 	{ user: "Karter Fife", stars: 5, text: "The games are so fun, if only I had friends to play with."},
 	{ user: "Jesse", stars: 5, text: "The games lowk dopefn on the per shizzel my nizzel."},
-	{ user: "Nathan", stars: 5, text: "I Cant believe you guys added the hit Game DELTARUNE. Im so happy you guys have my thanks. And it has all 4 chapters currently out. Really kudos to you guys. Kudos."}
+	{ user: "Mr. Dubas", stars: 4, text: "This website is causing alot of disruption's in my classroom, these game's heat tho so its chill"},
+	{ user: "Quinn", stars: 5, text: "This site so cool fr"}
+
 ];
 
 const FEATURED_REVIEW = [
@@ -38,7 +40,7 @@ let games = [];
         `;
 	}
 
-	const allCards = [...REVIEWS, ...FEATURED_REVIEW, ...FEATURED_REVIEW, ...FEATURED_REVIEW];
+	const allCards = [...REVIEWS, ...FEATURED_REVIEW];
 
 	scroller.innerHTML = [...allCards, ...allCards, ...allCards, ...allCards].map(buildReview).join("");
 })();

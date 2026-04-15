@@ -20,10 +20,8 @@ function buildNavbar() {
         <div class="nav-links">
             ${addLink("/", "Home")}
             ${addLink("/games/", "Games")}
-            ${addLink("/movies/", "Movies")}
 			${addLink("/helper/", "AI")}
             ${addLink("/settings/", "Settings")}
-            ${addLink("/request/", "Content Request")}
         </div>
 
         <button class="theme-toggle" id="theme-toggle">
