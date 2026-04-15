@@ -40,7 +40,16 @@ let games = [];
         `;
 	}
 
-	const allCards = [...REVIEWS, ...FEATURED_REVIEW];
+	const allCards = [];
+
+const maxLength = Math.max(REVIEWS.length, FEATURED_REVIEW.length);
+
+for (let i = 0; i < maxLength; i++) {
+	if (REVIEWS[i]) allCards.push(REVIEWS[i]);
+	if (FEATURED_REVIEW[i % FEATURED_REVIEW.length]) {
+		allCards.push(FEATURED_REVIEW[i % FEATURED_REVIEW.length]);
+	}
+}
 
 	scroller.innerHTML = [...allCards, ...allCards, ...allCards, ...allCards].map(buildReview).join("");
 })();
