@@ -37,7 +37,8 @@ function buildFooter() {
 	const year = new Date().getFullYear();
 
 	footer.innerHTML = `
-       Use of this site during school hours is at your own discretion; we are not responsible for any consequences resulting from its use. 
+        <p>${year} &copy; i-Ready Services ● <a href="https://forms.gle/mKZSwfHHWRARjKtT9" target="_blank">Request a Game</a></p>
+        <p>Use of this site during school hours is at your own discretion; we are not responsible for any consequences resulting from its use.</p>
     `;
 }
 
