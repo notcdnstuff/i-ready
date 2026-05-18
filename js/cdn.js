@@ -1,5 +1,5 @@
 // Config
-const CDN = "https://mathresources.southwestvoodoo.com/";
+const CDN = "http://mathresources.southwestvoodoo.com/";
 const MAX_RECENT = 12;
 const MAX_RANDOM_GAMES = 12;
 
